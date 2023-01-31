@@ -32,7 +32,7 @@ class Boy : public Person{
     public:
 
     void printAge(){
-
+        // Do Somethin
     }
 
 };
@@ -43,12 +43,17 @@ class Girl : public Person{
     public:
 
     void printAge(){
-
+        // Do something
     }
 
 };
 
 int main(){
+
+    Person ales;
+
+    ales.sayHello();
+    ales.printAge();
 
     Boy dimka;
 
@@ -58,6 +63,7 @@ int main(){
 
     Girl valya;
 
+    valya.sayHello();
     valya.printAge();
 
     return 0;
