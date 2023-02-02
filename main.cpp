@@ -16,8 +16,7 @@ class RationalFractoin{
 
     RationalFractoin operator *(const RationalFractoin &obj){
 
-        return RationalFractoin(m_numerator * obj.m_numerator,
-                m_denaminator * obj.m_denaminator);
+        return RationalFractoin(m_numerator * obj.m_numerator, m_denaminator * obj.m_denaminator);
     }
 
     RationalFractoin operator /(const RationalFractoin &obj){
