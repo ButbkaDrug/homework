@@ -4,14 +4,24 @@
 class RationalFractoin{
     public:
 
-    int m_numerator;
-    int m_denaminator;
+    double m_numerator;
+    double m_denaminator;
 
     RationalFractoin(const int &numerator, const int &denaminator)
     {
         m_numerator = numerator;
         m_denaminator = denaminator;
 
+    }
+
+    float ToFloat(){
+
+        return m_numerator / m_denaminator;
+    }
+
+    int ToInt(){
+
+        return (int)ToFloat();
     }
 
     RationalFractoin operator *(const RationalFractoin &obj){
@@ -37,11 +47,17 @@ std::ostream& operator << (std::ostream &out, const RationalFractoin &f){
 int main(){
 
     RationalFractoin a(3,4);
-    RationalFractoin b(5,8);
+    RationalFractoin b(9,8);
 
-    RationalFractoin c = a*b;
+    std::cout << "a = " << a << ", " << "b = " << b << std::endl;
 
-    std::cout << c << std::endl;
-    std::cout << a/b;
+    std::cout << "Convert a To Decimal: " << a.ToFloat() << std::endl;
+
+    std::cout << "Convert b To Intager: " << b.ToInt() << std::endl;
+
+    std::cout << "a * b = " << a*b << std::endl;
+
+    std::cout << "a / b = " << a/b << std::endl;
+
     return 0;
 }
